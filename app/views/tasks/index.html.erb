@@ -1,0 +1,21 @@
+<h1>List of your task</h1>
+
+<div class="border-botom">
+  <% @tasks.each do |task| %>
+    <% if task.completed == true %>
+      <div class=".container d-flex">
+        <i class="far fa-check-square"></i>
+        <h2><%= link_to task.title, task_path(task)%></h2>
+      </div>
+    <% else %>
+      <div class=".container d-flex">
+        <i class="far fa-square"></i>
+        <h2><%= link_to task.title, task_path(task)%></h2>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="margin-left">
+  <%= link_to 'create a new task', tasks_new_path%>
+</div>

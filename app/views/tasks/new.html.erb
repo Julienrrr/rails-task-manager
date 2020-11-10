@@ -1,0 +1,15 @@
+<h1>Create a new task below</h1>
+
+<div class=".container">
+  <div class="form-control">
+    <%= simple_form_for @task do |f| %>
+      <%= f.input :title %>
+  </div>
+  <div class="form-control">
+      <%= f.input :details %>
+  </div>
+  <div>
+      <%= f.submit "Create", class: 'btn btn-primary' %>
+  </div>
+    <% end %>
+</div>
